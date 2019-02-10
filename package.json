@@ -1,7 +1,7 @@
 {
-  "name": "template",
-  "productName": "template",
-  "description": "template",
+  "name": "Flashlight",
+  "productName": "Flashlight",
+  "description": "Flashlight",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
@@ -28,7 +28,7 @@
   },
   "config": {
     "app": {
-      "url": "https://google.com"
+      "url": "https://search-athenaesohioflashlightdev-7jnrefuwryw5j2rmsvaxtbiaba.us-west-2.es.amazonaws.com/_plugin/kibana/app/kibana"
     },
     "forge": {
       "packagerConfig": {
