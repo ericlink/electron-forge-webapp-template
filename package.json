@@ -1,7 +1,7 @@
 {
-  "name": "template",
-  "productName": "template",
-  "description": "template",
+  "name": "Udemy",
+  "productName": "Udemy",
+  "description": "Udemy",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
@@ -28,7 +28,7 @@
   },
   "config": {
     "app": {
-      "url": "https://google.com"
+      "url": "https://udemy.com"
     },
     "forge": {
       "packagerConfig": {
