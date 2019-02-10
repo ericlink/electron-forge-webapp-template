@@ -1,7 +1,7 @@
 {
-  "name": "template",
-  "productName": "template",
-  "description": "template",
+  "name": "AWS",
+  "productName": "AWS",
+  "description": "AWS",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
@@ -28,7 +28,7 @@
   },
   "config": {
     "app": {
-      "url": "https://google.com"
+      "url": "https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2#"
     },
     "forge": {
       "packagerConfig": {
