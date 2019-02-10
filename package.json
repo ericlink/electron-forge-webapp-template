@@ -1,7 +1,7 @@
 {
-  "name": "template",
-  "productName": "template",
-  "description": "template",
+  "name": "JIRA",
+  "productName": "JIRA",
+  "description": "JIRA",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
@@ -28,7 +28,7 @@
   },
   "config": {
     "app": {
-      "url": "https://google.com"
+      "url": "https://examsoft.jira.com/secure/RapidBoard.jspa?rapidView=72"
     },
     "forge": {
       "packagerConfig": {
