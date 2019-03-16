@@ -1,20 +1,39 @@
-# **m**ark**d**own**p**review
+# electron-forge-webapp-template
 
-Markdown preview using marked, highlight.js, mermaid and live reload.
+Host a webapp in electron with an app icon, persistent cookie support, window position management, common menus and keyboard shortcuts
 
-`mdp example.md`
+Also see Desktop PWAs
 
-upstream is `git clone https://github.com/ericlink/electron-forge-webapp-template.git`
+* [Chrome PWA Support](https://medium.com/dailyjs/goodbye-electron-hello-desktop-pwas-f316b8f39882)
+* [https://www.desktop-pwas.com/](https://www.desktop-pwas.com/)
 
-[icon finder](https://www.easyicon.net/language.en/))
+## Setup an app
 
-## build
+1. Clone the repo
+
+    `git clone https://github.com/ericlink/electron-forge-webapp-template.git`
+
+1. Find a mac icon and replace `app.icns` with it ([Icon Finder](https://www.easyicon.net/language.en/))
+1. Edit `package.json` to set the name and url for the app
+
+    ``` json
+    "name": "template",
+    "productName": "template",
+    "description": "template",
+    ```
+
+    ``` json
+    "config": {
+        "app": {
+        "url": "https://google.com"
+        },
+    ```
 1. `npm install`
 1. `npm run package`
 1. `mv ./out/App-x64/myApp.app /Applications/`
 1. `rm -rf out node_modules`
 
-## inventory
+## Inventory
 
 `app.icns` &mdash; mac icon support
 
