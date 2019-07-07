@@ -5,15 +5,12 @@
 //  - config.app.url
 //
 //
-const cookie = require('./cookie.js');
-const session = require('electron');
-const menu   = require('./menu.js');
 
 const createMainWindow = (url, appName) => {
   const windowStateKeeper = require('electron-window-state');
   let mainWindowState = windowStateKeeper({ defaultWidth: 1000, defaultHeight: 800 });
 
-  const { app, BrowserWindow, session } = require('electron');
+  const { BrowserWindow } = require('electron');
   const window = new BrowserWindow({
     show: false,
     title: appName,
@@ -34,11 +31,23 @@ const createMainWindow = (url, appName) => {
   window.loadURL(url);
   window.once('ready-to-show', () => {
     window.show();
+    // open other domains in default browser
+    const wc = window.webContents;
+    wc.on('will-navigate', function (e, wcUrl) {
+      console.log(wcUrl);
+      console.log(wc.getURL());
+      if (!wcUrl.startsWith(wc.getURL())) {
+        e.preventDefault();
+        require('electron').shell.openExternal(wcUrl);
+      }
+    })
   });
+
+
 }
 
 const init = () => {
-  const { app, BrowserWindow, session } = require('electron');
+  const { app, session } = require('electron');
 
   const pjson  = require('./package.json');
   const appName = pjson.name;
@@ -54,7 +63,9 @@ const init = () => {
     });
 
     app.on('ready', () => {
+      const cookie = require('./cookie.js');
       cookie.initCookieManager(session.defaultSession);
+      const menu   = require('./menu.js');
       menu.setupMenu(app);
       createMainWindow(url, appName);
     });
