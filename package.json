@@ -16,7 +16,7 @@
   "dependencies": {
     "electron-cookies": "*",
     "electron-reload": "^1.4.0",
-    "electron-window-state": "^5.0.2"
+    "electron-window-state": "^5.0.3"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.22",
@@ -24,7 +24,7 @@
     "@electron-forge/maker-rpm": "6.0.0-beta.22",
     "@electron-forge/maker-squirrel": "6.0.0-beta.22",
     "@electron-forge/maker-zip": "6.0.0-beta.22",
-    "electron": "3.0.9"
+    "electron": "5.0.6"
   },
   "config": {
     "app": {
